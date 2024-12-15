@@ -1,0 +1,113 @@
+@import "../utils/variables.scss";
+
+.our-rapid {
+  background-color: $main-text-color;
+  text-align: center;
+  color: $fourth-text-color;
+
+  &__title {
+    font-family: $second-font;
+    font-size: 85px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    padding-top: 121px;
+    line-height: 95px;
+    color: $fourth-text-color;
+  }
+
+  &__description {
+    font-size: 24px;
+    color: $fourth-text-color;
+    margin-bottom: 60px;
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 178px;
+  }
+
+  &__timeline {
+    position: relative;
+
+    .timeline {
+      &__years {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        max-width: 1290px;
+        margin: 0 auto;
+      }
+
+      &__year {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &-number {
+          font-family: $second-font;
+          font-weight: 900;
+          font-size: 100px;
+          line-height: 38px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        &--reverse {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__icon {
+        margin: 0 auto 20px;
+        width: 55px;
+        height: 55px;
+        background-color: transparent;
+        border-radius: 10%;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+
+        &.active {
+          animation: explode 0.5s ease-out, pulse 1.5s infinite ease-in-out;
+        }
+      }
+
+      &__title {
+        font-family: $main-font;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 32px;
+      }
+
+      &__discription {
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        line-height: 24px;
+      }
+
+      &__slider {
+        width: 630px;
+        margin-top: 120px;
+        margin-bottom: 124px;
+      }
+    }
+  }
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 $second-text-color;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px 10px $second-text-color;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 $second-text-color;
+  }
+}

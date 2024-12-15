@@ -1,0 +1,15 @@
+{
+  "name": "publuu",
+  "version": "1.0.0",
+  "description": "Swivl test task",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass src/styles/styles.scss src/styles/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.4"
+  }
+}

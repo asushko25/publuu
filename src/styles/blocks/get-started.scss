@@ -1,0 +1,57 @@
+@import "../utils/variables.scss";
+
+.get-started {
+  background-color: $main-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 95px;
+    color: $fourth-text-color;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  &__text {
+    color: $fourth-text-color;
+    border: none;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    pointer-events: none;
+    text-decoration: none;
+  }
+
+  &__button {
+    margin-top: 40px;
+    border-radius: 50px;
+    background-color: $second-text-color;
+    width: 202px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 100px;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background-color: $fourth-text-color;
+      color: $second-text-color;
+
+      .get-started__text {
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@import "../utils/variables.scss";
+
+.contact-us {
+  display: flex;
+  max-width: 1289px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  gap: 120px;
+  margin-bottom: 120px;
+
+  &__title--text {
+    font-family: $second-font;
+    font-weight: 900;
+    font-size: 85px;
+    line-height: 95px;
+    color: $main-text-color;
+    margin-top: 120px;
+  }
+
+  &__content {
+    &--discription-text {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 38px;
+      color: $main-text-color;
+      margin-top: 60px;
+    }
+
+    &--social-text {
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 32px;
+      margin-top: 67px;
+      margin-bottom: 20px;
+    }
+
+    &--social-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &__message {
+    max-width: 520px;
+
+    &--title {
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 38px;
+      color: $main-text-color;
+      margin-bottom: 25px;
+      margin-top: 120px;
+    }
+  }
+
+  &__names {
+    display: flex;
+    gap: 19px;
+    margin-bottom: 20px;
+  }
+
+  &__email {
+    margin-bottom: 20px;
+  }
+
+  &__phone--country {
+    display: flex;
+    gap: 19px;
+    margin-bottom: 20px;
+  }
+
+  &__sent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__policy {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &--text {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    background-color: $second-text-color;
+    color: $fourth-text-color;
+    border: 0px;
+    cursor: pointer;
+    font-family: $main-font;
+    font-weight: 700;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  &__button {
+    border-radius: 50px;
+    background-color: $second-text-color;
+    width: 189px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border 0.3s ease;
+
+    &:hover {
+      background-color: $fourth-text-color;
+      color: $second-text-color;
+      border: 2px solid $second-text-color;
+
+      .contact-us__text {
+        color: #080808;
+        background-color: $fourth-text-color;
+      }
+    }
+  }
+}
+
+.form__input {
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  padding: 9px 18px;
+  color: #080808;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form__input:focus {
+  border: 2px solid #146ef5;
+}
+
+.form__input--name::placeholder,
+.form__input--companyName::placeholder,
+.form__input--email::placeholder {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #080808;
+}
+
+.form__input--phone::placeholder {
+  font-family: "Urbanist", serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #080808;
+}
+
+.form__select {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  border: 0px;
+}
+
+.form__select:focus {
+  border: 0px;
+  outline: none;
+}
+
+.input__textarea {
+  width: 100%;
+  height: 115px;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  padding: 9px 18px;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #080808;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #080808;
+  }
+}
