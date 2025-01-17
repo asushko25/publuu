@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>Publuu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,92 +11,140 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
-  <body class="page">
-    <div class="page__container">
+  <body class="body">
+    <div class="wraperr">
       <header class="header">
-        <div class="header-top-bar">
-          <div class="header-top-bar__elements">
-            <a href="#" class="top-bar__logo">
-              <img src="./images/header/publuu-logo.svg" alt="Publuu Logo" />
-            </a>
+        <div class="container header__container">
+          <div class="top-bar">
+            <div class="top-bar__info">
+              <a href="#" class="top-bar__logo">
+                <img src="./icons/header/logo.svg" alt="Publuu Logo" />
+              </a>
 
-            <nav class="top-bar__nav" aria-label="Main navigation">
-              <ul class="top-bar_list">
-                <li class="top-bar__item top-bar__link--solutions">
-                  <a class="top-bar__link" href="#Solutions">Solutions</a>
+              <button type="button" class="btn--mobile-nav">
+                <a href="#menu">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 8H28V10.6667H4V8ZM4 14.6667H28V17.3333H4V14.6667ZM4 21.3333H28V24H4V21.3333Z"
+                      fill="#000"
+                    ></path>
+                  </svg>
+                </a>
+              </button>
+
+              <nav class="top-bar__nav">
+                <ul class="top-bar__list">
+                  <li class="top-bar__item">
+                    <a href="#Solutions" class="top-bar__link">Solutions</a>
+                  </li>
+
+                  <li class="top-bar__item">
+                    <a href="#Features" class="top-bar__link">Features</a>
+                  </li>
+
+                  <li class="top-bar__item">
+                    <a href="#Prices" class="top-bar__link">Prices</a>
+                  </li>
+
+                  <li class="top-bar__item">
+                    <a href="#Help" class="top-bar__link">Help</a>
+                  </li>
+
+                  <li class="top-bar__item">
+                    <a href="#Blog" class="top-bar__link">Blog</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="top-bar__right-info">
+              <div class="top-bar__links">
+                <a
+                  href="https://publuu.com/register/"
+                  class="top-bar__button try-button"
+                >
+                  Try for free
+                </a>
+
+                <a
+                  href="https://publuu.com/login/"
+                  class="top-bar__button login-button"
+                >
+                  Login
+                </a>
+              </div>
+
+              <div class="header__lang">
+                <div class="header__lang-icon">
+                  <img src="./icons/header/lang.svg" alt="icon language" />
+                </div>
+              
+                <div class="header-actions__language-EN">
+                  <span class="header__lang__text">EN</span>
                   <img
                     class="icon__right"
-                    src="./icons/chevron-right.svg"
-                    alt="Chevron pointing right"
+                    src="./icons/header/chevron-right.svg"
+                    alt="chevron_right"
                   />
-                </li>
-                <li class="top-bar__item">
-                  <a class="top-bar__link" href="#Features">Features</a>
-                </li>
-                <li class="top-bar__item">
-                  <a class="top-bar__link" href="#Examples">Examples</a>
-                </li>
-                <li class="top-bar__item">
-                  <a class="top-bar__link" href="#Prices">Prices</a>
-                </li>
-                <li class="top-bar__item">
-                  <a class="top-bar__link" href="#Help">Help</a>
-                </li>
-                <li class="top-bar__item">
-                  <a class="top-bar__link" href="#Blog">Blog</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="header-actions">
-              <div class="header-actions__buttons">
-                <div class="header-actions__buttons--main">
-                  <div class="header-actions__try-button">
-                    <button class="header__button header__button--try-text">
-                      Try for free
-                    </button>
-                  </div>
-
-                  <div class="header-actions__login-button">
-                    <button class="header__button header__button--login-text">
-                      Login
-                    </button>
-                  </div>
                 </div>
-
-                <div class="header-actions__language">
-                  <div class="header-actions__language-flag">
-                    <img src="./icons/header/language.svg" alt="language" />
-                  </div>
-
-                  <div class="header-actions__language-EN">
-                    <img src="./icons/header/EN.svg" alt="EN" />
-                    <img
-                      class="icon__right"
-                      src="./icons/chevron-right.svg"
-                      alt="chevron_right"
-                    />
-                  </div>
-                </div>
+              
+                <ul class="header__lang-dropdown">
+                  <li>
+                    <img src="./icons/header/lang.svg" alt="icon language" />
+                    English
+                  </li>
+                  <li>
+                    <img src="./icons/header/lang.svg" alt="icon language" />
+                    Deutsch
+                  </li>
+                  <li>
+                    <img src="./icons/header/lang.svg" alt="icon language" />
+                    Español
+                  </li>
+                  <li>
+                    <img src="./icons/header/lang.svg" alt="icon language" />
+                    Français
+                  </li>
+                  <li>
+                    <img src="./icons/header/lang.svg" alt="icon language" />
+                    Polski
+                  </li>
+                </ul>
               </div>
+              
             </div>
           </div>
         </div>
 
-        <div class="who-are-we">
-          <h1 class="header__title--text">Who are we?</h1>
-          <p class="header__title--discription">
+        <div class="header__text">
+          <h1 class="header__text-title">Who are we?</h1>
+
+          <p class="header__text-discription">
             We are a passionate team of creatives and developers with roots
-            dating back to <span class="header__span">2011,</span> when we
-            started with an idea: helping publishers share their content easily.
-            In <span class="header__span">2017,</span> we launched
-            <span class="header__span">Publuu.com,</span> making it simple to
-            turn PDFs into interactive, customizable flipbooks.
+            dating back to
+            <span class="header__span">2011,</span>
+            when we started with an idea: helping publishers share their content
+            easily. In
+            <span class="header__span">2017,</span>
+            we launched
+            <span class="header__span">Publuu.com,</span>
+            making it simple to turn PDFs into interactive, customizable
+            flipbooks.
           </p>
 
-          <p class="header__title--discription">
+          <p class="header__text-discription">
             Our team is dedicated to helping you at every step of the way. Our
             developers work hard to create practical, easy-to-use features
             tailored to your needs, while our customer support is always ready
@@ -104,232 +152,333 @@
             audiences worldwide and reach your goals.
           </p>
         </div>
+
+        <aside class="page__menu menu" id="menu">
+          <div class="container">
+            <div class="page__menu__content">
+              <div class="aside-top-bar">
+                <a class="top-bar__logo">
+                  <img src="./icons/header/logo.svg" alt="logo" />
+                </a>
+
+                <a href="#" class="icon--close">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4 8H28V10.6667H4V8ZM4 14.6667H28V17.3333H4V14.6667ZM4 21.3333H28V24H4V21.3333Z"
+                        fill="#000"
+                      ></path>
+                    </svg>
+                </a>
+              </div>
+
+              <div class="menu__content">
+                <nav class="nav menu__nav">
+                  <ul class="aside-top-bar__list">
+                    <li class="aside-top-bar-item">
+                      <a href="#Solutions" class="aside-top-bar__link">
+                        Solutions
+                      </a>
+                    </li>
+
+                    <li class="aside-top-bar-item">
+                      <a href="#Features" class="aside-top-bar__link">
+                        Features
+                      </a>
+                    </li>
+
+                    <li class="aside-top-bar-item">
+                      <a href="#Prices" class="aside-top-bar__link">Prices</a>
+                    </li>
+
+                    <li class="aside-top-bar-item">
+                      <a href="#Help" class="aside-top-bar__link">Help</a>
+                    </li>
+
+                    <li class="aside-top-bar-item">
+                      <a href="#Blog" class="aside-top-bar__link">Blog</a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <div class="aside-div">
+
+                </div>
+
+                <div class="aside-bar__right-info">
+                  <div class="aside-bar__try">
+                    <a
+                      href="https://publuu.com/register/"
+                      class="aside-bar__button aside-try-button"
+                    >
+                      Try for free
+                    </a>
+                  </div>
+
+                  <div class="aside-bar__login">
+                    <a
+                      href="https://publuu.com/login/"
+                      class="aside-bar__button aside-login-button"
+                    >
+                      Login
+                    </a>
+                  </div>
+
+                  <div class="aside-bar__lang">
+                    <div class="aside-bar__lang-icon">
+                      <img src="./icons/header/lang.svg" alt="icon language" />
+                    </div>
+                    
+                      <div class="aside-bar__lang-text-wrapper">
+                        <div class="aside-bar__lang-text">EN</div>
+                      </div>
+
+                      <div class="aside-bar__language-dropdown">
+                      <img
+                        class="aside-bar__icon-right"
+                        src="./icons/header/chevron-right.svg"
+                        alt="chevron_right"
+                      />
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </header>
+      <div class="line"></div>
 
-      <div class="border"></div>
 
-      <main>
-        <div class="our-mission-container">
-          <section class="our-mission">
-            <div class="our-mission__photo">
-              <img src="./images/our-mission/our-mission__photo.png" alt="" />
+      <main class="main">
+        <section class="our-mission">
+          <div class="our-mission__photo">
+            <img src="./images/our-mission/our-mission__photo.png" alt="our mission photo">
+          </div>
+
+          <div class="our-mission__info">
+            <h2 class="our-mission__title">
+              Our mission
+            </h2>
+
+            <div class="our-mission__discription">
+              Whether you're a business owner a creator, or an agency, we're dedicated to bringing 
+              you a complete solution for:
             </div>
 
-            <div class="our-mission__content">
-              <h2 class="our-mission__title">Our mission</h2>
+            <div class="our-mission__item">
+              <img
+                src="./icons/our-mission/item.svg"
+                alt="mission item"
+              />
 
-              <p class="our-mission__description">
-                Whether you're a business owner, a creator, or an agency, we're
-                dedicated to bringing you a complete solution for:
+              <p class="our-mission__item-text">
+                Sharing your content online in the most convenient way.
               </p>
-
-              <div class="our-mission__item">
-                <img
-                  src="./images/our-mission/vector-item.svg"
-                  alt="mission item"
-                />
-
-                <p class="our-mission__item-text">
-                  Sharing your content online in the most convenient way.
-                </p>
-              </div>
-
-              <div class="our-mission__item">
-                <img
-                  src="./images/our-mission/vector-item.svg"
-                  alt="mission item"
-                />
-
-                <p class="our-mission__item-text">
-                  Transforming your documents into interactive, accessible, and
-                  trackable digital publications.
-                </p>
-              </div>
-
-              <div class="our-mission__item">
-                <img
-                  src="./images/our-mission/vector-item.svg"
-                  alt="mission item"
-                />
-
-                <p class="our-mission__item-text">All without limits</p>
-              </div>
             </div>
-          </section>
-        </div>
 
-        <div class="partnership">
-          <h2 class="partnership-discription">
-            Publuu isn’t just software to us;<br />
-            it’s a partnership, and we’re here to grow <br />
-            alongside you, every step of the way.
-          </h2>
-        </div>
+            <div class="our-mission__item">
+              <img
+                src="./icons/our-mission/item.svg"
+                alt="mission item"
+              />
+
+              <p class="our-mission__item-text">
+                Transforming your documents into interactive, accessible, and
+                trackable digital publications.
+              </p>
+            </div>
+
+            <div class="our-mission__item">
+              <img
+                src="./icons/our-mission/item.svg"
+                alt="mission item"
+              />
+
+              <p class="our-mission__item-text">All without limits</p>
+            </div>
+          </div>
+          </div>
+
+          <h3 class="our-mission__text">
+            Publuu isn’t just software to us; it’s a partnership, and we’re here to grow alongside you, every step of the way.     
+          </h3>
+        </section>
 
         <section class="drives-us">
-          <div class="drives-us__content">
-            <div class="drives-us__information">
-              <h2 class="drives-us__title">What drives us?</h2>
-              <div class="drives-us__discription">
-                <div class="drives-us__discription-element">
-                  <img
-                    src="./images/drives-us/drive-us_element.png"
-                    alt="drives-us element"
-                  />
-                </div>
+          <div class="drives-us__container">
+            <div class="drives-us__info">
+              <h2 class="drives-us__title">
+                What drives us?
+              </h2>
 
-                <div class="drives-us__total-text">
-                  <p
-                    class="drives-us__discription-text drives-us__discription-bold"
-                  >
-                    Our passion for innovation drives us to continuously improve
-                    Publuu, making it a valuable tool to creators, marketers,
-                    and businesses.
-                  </p>
+              <div class="drives-us__wrapper">
+                <div class="drives-us__line"></div>
 
-                  <p class="drives-us__discription-text">
-                    Teamwork and creativity keep us focused on giving you the
-                    best tools for digital publishing.
-                  </p>
-
-                  <p class="drives-us__discription-text">
-                    Helping you succeed and seeing your ideas come to life is
-                    what motivates us every day.
-                  </p>
-                </div>
+                <p class="drives-us__discription">
+                  <span class="drives-us__discription-item drives-us__discription-bold">
+                    Our passion for innovation drives us to continuously improve Publuu, making it a valuable tool to creators, marketers, and businesses.
+                  </span>
+                  <br>
+                  <br>
+                  <span class="drives-us__discription-item">
+                    Teamwork and creativity keep us focused on giving you the best tools for digital publishing.
+                  </span>
+                  <br>
+                  <br>
+                  <span class="drives-us__discription-item">
+                    Helping you succeed and seeing your ideas come to life is what motivates us every day.
+                  </span>
+                </p>
               </div>
             </div>
 
             <div class="drives-us__photo">
-              <img
-                src="./images/drives-us/drives-us__photo.png"
-                alt="drives-us"
-              />
+              <img src="./images/drives-us/drives-us.png" alt="employers photo">
             </div>
           </div>
         </section>
 
         <section class="our-solutions">
-          <h2 class="our-solutions__title">Our solutions</h2>
+          <div class="our-solutions__container">
+            <h2 class="our-solutions__title">
+              Our solutions
+            </h2>
 
-          <p class="our-solutions__discription">
-            See how our interactive flipbooks and features make digital
-            publishing easy and profitable:
-          </p>
+            <p class="our-solutions__discription">
+              See how our interactive flipbooks and features make digital publishing easy and profitable:
+            </p>
+          </div>
 
           <div class="our-solutions__iframe">
-            <iframe
-              src="https://publuu.com/flip-book/4712/1343346/page/2"
-              width="100%"
-              height="720"
-              scrolling="no"
-              frameborder="0"
-              allow="clipboard-write; autoplay; fullscreen;"
-              class="publuuflip"
-              title="Publuu Demo Flipbook"
-            ></iframe>
+            <iframe class="our-solutions__iframe-item" src="https://publuu.com/flip-book/4712/1343346/page/2" width="100%" height="720" scrolling="no" frameborder="0" allow="clipboard-write; autoplay; fullscreen;" class="publuuflip" title="Publuu Demo Flipbook"></iframe>
           </div>
         </section>
+
+
+
 
         <section class="our-rapid">
-          <div class="our-rapid__info">
-            <h2 class="our-rapid__title">Our rapid growth</h2>
-            <div class="our-rapid__description">
-              Take a look at the milestones and moments that helped us grow
-              rapidly in the industry:
+          <div class="our-rapid__container">
+            <div class="our-rapid__info">
+              <h1 class="our-rapid__title">Our rapid growth</h1>
+              <p class="our-rapid__discription">
+                Take a look at the milestones and moments that helped us grow rapidly in the industry:
+              </p>
             </div>
+        
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide__item wiper-slide__item-first">
+                    <div class="swiper-slide__year">2011</div>
+                    <div class="swiper-slide__icon">
+                      <img src="./icons/our-rapid/lamp-icon.svg" alt="lamp icon" />
+                    </div>
+                    <div class="swiper-slide__text">
+                      <div class="swiper-slide__title">
+                        Publuu started<br />with a big idea:
+                      </div>
+                      <div class="swiper-slide__discription">
+                        Helping magazine publishers share their content easily. We developed mobile software that allowed them to share flipbooks on the App Store, Google Play, and Windows Mobile.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="swiper-slide">
+                  <div class="swiper-slide__item wiper-slide__item-first">
+                    <div class="swiper-slide__year">2014</div>
+                    <div class="swiper-slide__icon">
+                      <img src="./icons/our-rapid/alert.svg" alt="alert icon" />
+                    </div>
+                    <div class="swiper-slide__text">
+                      <div class="swiper-slide__title">
+                        Our mobile apps caught the attention of global brands
+                      </div>
+                      <div class="swiper-slide__discription">
+                        like Optimal, Burda, and FASHION Magazine, giving us valuable insights into international mobile publication needs.                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="swiper-slide">
+                  <div class="swiper-slide__item wiper-slide__item-first">
+                    <div class="swiper-slide__year">2017</div>
+                    <div class="swiper-slide__icon">
+                      <img src="./icons/our-rapid/rocket.svg" alt="rocket" />
+                    </div>
+                    <div class="swiper-slide__text">
+                      <div class="swiper-slide__title">
+                        That's when things <br>
+                          came together
+                      </div>
+                      <div class="swiper-slide__discription">
+                        We launched Publuu.com - a platform designed to offer an easy, cost-effective way to turn PDFs into customizable, interactive flipbooks.                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="swiper-slide__item wiper-slide__item-first">
+                    <div class="swiper-slide__year">2018</div>
+                    <div class="swiper-slide__icon">
+                      <img src="./icons/our-rapid/rocket.svg" alt="rocket" />
+                    </div>
+                    <div class="swiper-slide__text">
+                      <div class="swiper-slide__title">
+                        That's when things <br>
+                          came together
+                      </div>
+                      <div class="swiper-slide__discription">
+                        We launched Publuu.com - a platform designed to offer an easy, cost-effective way to turn PDFs into customizable, interactive flipbooks.                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="swiper-slide__item wiper-slide__item-first">
+                    <div class="swiper-slide__year">2019</div>
+                    <div class="swiper-slide__icon">
+                      <img src="./icons/our-rapid/rocket.svg" alt="rocket" />
+                    </div>
+                    <div class="swiper-slide__text">
+                      <div class="swiper-slide__title">
+                        That's when things <br>
+                          came together
+                      </div>
+                      <div class="swiper-slide__discription">
+                        We launched Publuu.com - a platform designed to offer an easy, cost-effective way to turn PDFs into customizable, interactive flipbooks.                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="swiper-slide__item wiper-slide__item-first">
+                    <div class="swiper-slide__year">2025</div>
+                    <div class="swiper-slide__icon">
+                      <img src="./icons/our-rapid/bomb.svg" alt="bomb icon" />
+                    </div>
+                    <div class="swiper-slide__text">
+                      <div class="swiper-slide__title">
+                        Publuu went global
+                      </div>
+                      <div class="swiper-slide__discription">
+                        We expanded our services worldwide, reaching new audiences every day.
+                      </div>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-
-          <div class="our-rapid__timeline">
-            <div class="timeline__years">
-              <div class="timeline__year" data-year="2011">
-                <div class="timeline__year-number">2011</div>
-                <div class="timeline__icon">
-                  <img
-                    src="./icons/our-rapid/first-step.svg"
-                    alt="first-step icon"
-                  />
-                </div>
-
-                <div class="timeline__title">
-                  Publuu started <br>with a big idea...
-                </div>
-
-                <div class="timeline__discription">
-                  Helping magazine publishers share their content easily. We
-                  developed mobile software that allowed them to share flipbooks
-                  on the App Store, Google Play, and Windows Mobile.
-                </div>
-              </div>
-
-              <div class="timeline__year timeline__year--reverse" data-year="2014">
-                <div class="timeline__title">
-                  Our mobile apps caught the attention of global brands
-                </div>
-
-                <div class="timeline__discription">
-                  like Optimal, Burda, and FASHION Magazine, giving us valuable insights into international mobile publication needs.
-                </div>
-
-                <div class="timeline__icon">
-                  <img
-                    src="./icons/our-rapid/third-step.svg"
-                    alt="second-step icon"
-                  />
-                </div>
-
-                <div class="timeline__year-number ">2014</div>
-              </div>
-              <div class="timeline__year" data-year="2017">
-                <div class="timeline__year-number">2017</div>
-                <div class="timeline__icon">
-                  <img
-                    src="./icons/our-rapid/third-step.svg"
-                    alt="first-step icon"
-                  />
-                </div>
-
-                <div class="timeline__title">
-                  That's when things came together
-                </div>
-
-                <div class="timeline__discription">
-                  We launched Publuu.com - a platform designed to offer an easy, cost-effective way to turn PDFs 
-                  into customizable, interactive flipbooks.
-                </div>
-              </div>
-
-              <div class="timeline__year timeline__year--reverse" data-year="2021">
-                <div class="timeline__title">
-                  Publuu went global
-                </div>
-
-                <div class="timeline__discription">
-                  We expanded our services worldwide, reaching new audiences every day.
-                </div>
-
-                <div class="timeline__icon">
-                  <img
-                    src="./icons/our-rapid/fourth-step.svg"
-                    alt="fourth-step icon"
-                  />
-                </div>
-
-                <div class="timeline__year-number">2021</div>
-              </div>
-            </div>
-
-              <input
-              type="range"
-              min="0"
-              max="3"
-              value="1"
-              step="1"
-              class="timeline__slider"
-              id="timeline-slider"
-            />
         </section>
-
+        
         <section class="by-numbers">
           <h2 class="by-numbers__title">Publuu by the numbers</h2>
 
@@ -341,7 +490,7 @@
                 </div>
 
                 <div class="by-numbers__card--icon">
-                  <img src="./icons/by-numbers/years.svg" alt="time icon" />
+                  <img src="./icons/by-numbers/calendar-clock.svg" alt="time icon" />
                 </div>
               </div>
 
@@ -373,7 +522,7 @@
                 </div>
 
                 <div class="by-numbers__card--icon">
-                  <img src="./icons/by-numbers/users.svg" alt="users icon" />
+                  <img src="./icons/by-numbers/account-group.svg" alt="users icon" />
                 </div>
               </div>
 
@@ -389,7 +538,7 @@
                 </div>
 
                 <div class="by-numbers__card--icon">
-                  <img src="./icons/by-numbers/world.svg" alt="world icon" />
+                  <img src="./icons/by-numbers/web.svg" alt="world icon" />
                 </div>
               </div>
 
@@ -407,7 +556,7 @@
                 <div class="person-card person-card__active">
                   <div class="person-card__photo">
                     <img
-                      src="./images/opinion/person__photo.svg"
+                      src="./icons/opinion/person.svg"
                       alt="person"
                     />
                   </div>
@@ -423,7 +572,35 @@
                     </div>
                     <div class="person-card__position">
                       <p class="person-card__position--text">
-                        <img src="./icons/opinion/opinon.svg" alt="opinion" />
+                        <img src="./icons/opinion/opinion.svg" alt="opinion" />
+                      </p>
+                    </div>
+                  </div>
+                  <div class="person-card__focus-line"></div>
+                </div>
+              </article>
+
+              <article class="person">
+                <div class="person-card person-card__active">
+                  <div class="person-card__photo">
+                    <img
+                    src="./icons/opinion/person.svg"
+                    alt="person"
+                    />
+                  </div>
+
+                  <div class="person-card__date">
+                    <div class="person-card__name">
+                      <p class="person-card__name--text">Matt Rose</p>
+                    </div>
+                    <div class="person-card__position">
+                      <p class="person-card__position--text">
+                        Director at Tratech Consulting
+                      </p>
+                    </div>
+                    <div class="person-card__position">
+                      <p class="person-card__position--text">
+                        <img src="./icons/opinion/opinion.svg" alt="opinion" />
                       </p>
                     </div>
                   </div>
@@ -434,7 +611,7 @@
                 <div class="person-card person-card__active">
                   <div class="person-card__photo">
                     <img
-                      src="./images/opinion/person__photo.svg"
+                      src="./icons/opinion/person.svg"
                       alt="person"
                     />
                   </div>
@@ -450,34 +627,7 @@
                     </div>
                     <div class="person-card__position">
                       <p class="person-card__position--text">
-                        <img src="./icons/opinion/opinon.svg" alt="opinion" />
-                      </p>
-                    </div>
-                  </div>
-                  <div class="person-card__focus-line"></div>
-                </div>
-              </article>
-              <article class="person">
-                <div class="person-card person-card__active">
-                  <div class="person-card__photo">
-                    <img
-                      src="./images/opinion/person__photo.svg"
-                      alt="person"
-                    />
-                  </div>
-
-                  <div class="person-card__date">
-                    <div class="person-card__name">
-                      <p class="person-card__name--text">Matt Rose</p>
-                    </div>
-                    <div class="person-card__position">
-                      <p class="person-card__position--text">
-                        Director at Tratech Consulting
-                      </p>
-                    </div>
-                    <div class="person-card__position">
-                      <p class="person-card__position--text">
-                        <img src="./icons/opinion/opinon.svg" alt="opinion" />
+                        <img src="./icons/opinion/opinion.svg" alt="opinion" />
                       </p>
                     </div>
                   </div>
@@ -520,158 +670,374 @@
         </section>
 
         <section class="contact-us">
-          <div class="contact-us__content">
-            <div class="contact-us__title">
-              <h2 class="contact-us__title--text">Let's connect!</h2>
-            </div>
-
-            <div class="contact-us__content--discription">
-              <p class="contact-us__content--discription-text">
-                Have questions or need help? <br />We're here for you!
-                <br />Feel free to reach out.
-              </p>
-            </div>
-
-            <div class="contact-us__content--social">
-              <div class="contact-us__content--social-text">
-                Visit our social media
+          <div class="contact-us__container">
+            <div class="contact-us__content">
+              <div class="contact-us__title">
+                <h2 class="contact-us__title--text">Let's connect!</h2>
               </div>
-
-              <div class="contact-us__content--social-icons">
-                <div class="contact-us__content--icon">
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/contact-us/facebook.svg"
-                      alt="Facebook Logo"
-                    />
-                  </a>
+  
+              <div class="contact-us__content--discription">
+                <p class="contact-us__content--discription-text">
+                  Have questions or need help? <br />We're here for you!
+                  <br />Feel free to reach out.
+                </p>
+              </div>
+  
+              <div class="contact-us__content--social">
+                <div class="contact-us__content--social-text">
+                  Visit our social media
                 </div>
-
-                <div class="contact-us__content--icon">
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./icons/contact-us/linkedin.svg"
-                      alt="Linkedin Logo"
-                    />
-                  </a>
+  
+                <div class="contact-us__content--social-icons">
+                  <div class="contact-us__content--icon">
+                    <a
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="./icons/contact/facebook.svg"
+                        alt="Facebook Logo"
+                      />
+                    </a>
+                  </div>
+  
+                  <div class="contact-us__content--icon">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="./icons/contact/linkedin.svg"
+                        alt="Linkedin Logo"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="contact-us__message">
-            <h2 class="contact-us__message--title">Write us a message:</h2>
-
-            <form
-              autocomplete="off"
-              id="form"
-              action="#"
-              method="post"
-              autocomplete="off"
-              onsubmit="this.reset();
-              return false;"
-              class="contact-us__message-form"
-            >
+  
+            <div class="contact-us__message">
+              <h2 class="contact-us__message--title">Write us a message:</h2>
+  
+              <form
+                autocomplete="on"
+                id="form"
+                action="#"
+                method="post"
+                autocomplete="off"
+                onsubmit="this.reset();
+                return false;"
+                class="contact-us__message-form"
+              >
               <div class="contact-us__names">
-                <input
-                  type="text"
-                  class="form__input form__input--name"
-                  name="user-name"
-                  placeholder="Name"
-                />
-
-                <input
-                  type="text"
-                  class="form__input form__input--companyName"
-                  name="company-name"
-                  placeholder="Company name *"
-                  required
-                />
+                <div class="user-name">
+                  <input
+                    type="text"
+                    class="form__input form__input--name form__input-item"
+                    name="user-name"
+                    placeholder="Name"
+                  />
+                </div>
+              
+                <div class="company-name form__control">
+                  <input
+                    type="text"
+                    class="form__input form__input--companyName form__input-item" 
+                    name="company-name"
+                    placeholder=""
+                    required
+                  />
+                  <span class="form__control__placeholder">
+                    Company name
+                    <span class="symbol--required">*</span>
+                  </span>
+                </div>
               </div>
-
-              <div class="contact-us__email">
+  
+              <div class="contact-us__email form__control">
                 <input
                   class="form__input form__input--email"
                   type="email"
                   name="email"
-                  placeholder="E-mail *"
+                  placeholder=""
                   required
                 />
+                <span class="form__control__placeholder">
+                  E-mail <span class="symbol--required">*</span>
+                </span>
               </div>
+  
 
               <div class="contact-us__phone--country">
                 <input
-                  class="form__input form__input--phone"
+                  class="form__input form__input--phone form__input-item"
                   type="tel"
                   name="phone"
                   placeholder="Phone number"
                 />
-
-                <div class="form__input country__input">
-                  <select class="form__select" name="country" required>
-                    <option value="" disabled selected>Country</option>
-                    <option value="usa">United States</option>
-                    <option value="canada">Canada</option>
-                    <option value="uk">United Kingdom</option>
-                    <option value="poland">Poland</option>
-                  </select>
+              
+                <div class="dropdown">
+                  <div class="select form__input-item select-input">
+                    <span class="selected">Country</span>
+                    <div class="caret">
+                      <img src="./icons/contact-us/chevron-down.svg" alt="chevron" class="caret-icon">
+                    </div>
+                  </div>
+                
+                  <div class="menu-container">
+                    <div class="search-box">
+                      <img src="./icons/contact-us/search.svg" alt="Search" class="search-icon" />
+                      <input
+                        type="text"
+                        class="search-input"
+                        placeholder="Search country..."
+                      />
+                    </div>
+                    <ul class="menu-language">
+                      <li>Afghanistan</li>
+                      <li>Albania</li>
+                      <li>Algeria</li>
+                      <li>Andorra</li>
+                      <li>Angola</li>
+                      <li>Antigua and Barbuda</li>
+                      <li>Argentina</li>
+                      <li>Armenia</li>
+                      <li>Australia</li>
+                      <li>Austria</li>
+                      <li>Azerbaijan</li>
+                      <li>Bahamas</li>
+                      <li>Bahrain</li>
+                      <li>Bangladesh</li>
+                      <li>Barbados</li>
+                      <li>Belarus</li>
+                      <li>Belgium</li>
+                      <li>Belize</li>
+                      <li>Benin</li>
+                      <li>Bhutan</li>
+                      <li>Bolivia</li>
+                      <li>Bosnia and Herzegovina</li>
+                      <li>Botswana</li>
+                      <li>Brazil</li>
+                      <li>Brunei</li>
+                      <li>Bulgaria</li>
+                      <li>Burkina Faso</li>
+                      <li>Burundi</li>
+                      <li>Cabo Verde</li>
+                      <li>Cambodia</li>
+                      <li>Cameroon</li>
+                      <li>Canada</li>
+                      <li>Central African Republic</li>
+                      <li>Chad</li>
+                      <li>Chile</li>
+                      <li>China</li>
+                      <li>Colombia</li>
+                      <li>Comoros</li>
+                      <li>Congo (Congo-Brazzaville)</li>
+                      <li>Costa Rica</li>
+                      <li>Côte d’Ivoire</li>
+                      <li>Croatia</li>
+                      <li>Cuba</li>
+                      <li>Cyprus</li>
+                      <li>Czechia (Czech Republic)</li>
+                      <li>Democratic Republic of the Congo</li>
+                      <li>Denmark</li>
+                      <li>Djibouti</li>
+                      <li>Dominica</li>
+                      <li>Dominican Republic</li>
+                      <li>Ecuador</li>
+                      <li>Egypt</li>
+                      <li>El Salvador</li>
+                      <li>Equatorial Guinea</li>
+                      <li>Eritrea</li>
+                      <li>Estonia</li>
+                      <li>Eswatini (fmr. "Swaziland")</li>
+                      <li>Ethiopia</li>
+                      <li>Fiji</li>
+                      <li>Finland</li>
+                      <li>France</li>
+                      <li>Gabon</li>
+                      <li>Gambia</li>
+                      <li>Georgia</li>
+                      <li>Germany</li>
+                      <li>Ghana</li>
+                      <li>Greece</li>
+                      <li>Grenada</li>
+                      <li>Guatemala</li>
+                      <li>Guinea</li>
+                      <li>Guinea-Bissau</li>
+                      <li>Guyana</li>
+                      <li>Haiti</li>
+                      <li>Holy See</li>
+                      <li>Honduras</li>
+                      <li>Hungary</li>
+                      <li>Iceland</li>
+                      <li>India</li>
+                      <li>Indonesia</li>
+                      <li>Iran</li>
+                      <li>Iraq</li>
+                      <li>Ireland</li>
+                      <li>Israel</li>
+                      <li>Italy</li>
+                      <li>Jamaica</li>
+                      <li>Japan</li>
+                      <li>Jordan</li>
+                      <li>Kazakhstan</li>
+                      <li>Kenya</li>
+                      <li>Kiribati</li>
+                      <li>Kuwait</li>
+                      <li>Kyrgyzstan</li>
+                      <li>Laos</li>
+                      <li>Latvia</li>
+                      <li>Lebanon</li>
+                      <li>Lesotho</li>
+                      <li>Liberia</li>
+                      <li>Libya</li>
+                      <li>Liechtenstein</li>
+                      <li>Lithuania</li>
+                      <li>Luxembourg</li>
+                      <li>Madagascar</li>
+                      <li>Malawi</li>
+                      <li>Malaysia</li>
+                      <li>Maldives</li>
+                      <li>Mali</li>
+                      <li>Malta</li>
+                      <li>Marshall Islands</li>
+                      <li>Mauritania</li>
+                      <li>Mauritius</li>
+                      <li>Mexico</li>
+                      <li>Micronesia</li>
+                      <li>Moldova</li>
+                      <li>Monaco</li>
+                      <li>Mongolia</li>
+                      <li>Montenegro</li>
+                      <li>Morocco</li>
+                      <li>Mozambique</li>
+                      <li>Myanmar (formerly Burma)</li>
+                      <li>Namibia</li>
+                      <li>Nauru</li>
+                      <li>Nepal</li>
+                      <li>Netherlands</li>
+                      <li>New Zealand</li>
+                      <li>Nicaragua</li>
+                      <li>Niger</li>
+                      <li>Nigeria</li>
+                      <li>North Korea</li>
+                      <li>North Macedonia</li>
+                      <li>Norway</li>
+                      <li>Oman</li>
+                      <li>Pakistan</li>
+                      <li>Palau</li>
+                      <li>Palestine State</li>
+                      <li>Panama</li>
+                      <li>Papua New Guinea</li>
+                      <li>Paraguay</li>
+                      <li>Peru</li>
+                      <li>Philippines</li>
+                      <li>Poland</li>
+                      <li>Portugal</li>
+                      <li>Qatar</li>
+                      <li>Romania</li>
+                      <li>Russia</li>
+                      <li>Rwanda</li>
+                      <li>Saint Kitts and Nevis</li>
+                      <li>Saint Lucia</li>
+                      <li>Saint Vincent and the Grenadines</li>
+                      <li>Samoa</li>
+                      <li>San Marino</li>
+                      <li>Sao Tome and Principe</li>
+                      <li>Saudi Arabia</li>
+                      <li>Senegal</li>
+                      <li>Serbia</li>
+                      <li>Seychelles</li>
+                      <li>Sierra Leone</li>
+                      <li>Singapore</li>
+                      <li>Slovakia</li>
+                      <li>Slovenia</li>
+                      <li>Solomon Islands</li>
+                      <li>Somalia</li>
+                      <li>South Africa</li>
+                      <li>South Korea</li>
+                      <li>South Sudan</li>
+                      <li>Spain</li>
+                      <li>Sri Lanka</li>
+                      <li>Sudan</li>
+                      <li>Suriname</li>
+                      <li>Sweden</li>
+                      <li>Switzerland</li>
+                      <li>Syria</li>
+                      <li>Tajikistan</li>
+                      <li>Tanzania</li>
+                      <li>Thailand</li>
+                      <li>Timor-Leste</li>
+                      <li>Togo</li>
+                      <li>Tonga</li>
+                      <li>Trinidad and Tobago</li>
+                      <li>Tunisia</li>
+                      <li>Turkey</li>
+                      <li>Turkmenistan</li>
+                      <li>Tuvalu</li>
+                      <li>Uganda</li>
+                      <li>Ukraine</li>
+                      <li>United Arab Emirates</li>
+                      <li>United Kingdom</li>
+                      <li>United States</li>
+                      <li>Uruguay</li>
+                      <li>Uzbekistan</li>
+                      <li>Vanuatu</li>
+                      <li>Venezuela</li>
+                      <li>Vietnam</li>
+                      <li>Yemen</li>
+                      <li>Zambia</li>
+                      <li>Zimbabwe</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <textarea
-                name="message"
-                class="form__input input__textarea"
-                placeholder="Your message *"
-                required
-              ></textarea>
-
-              <div class="contact-us__sent">
-                <div class="contact-us__policy">
-                  <div class="contact-us__checkbox">
-                    <input
-                      type="checkbox"
-                      id="checkbox"
-                      class="checkbox__input"
-                      required
-                    />
-                    <label
-                      for="checkbox"
-                      class="checkbox__input__label"
-                    ></label>
+              
+  
+                <div class="contact-us__message form__control">
+                  <textarea
+                    name="message"
+                    class="form__input input__textarea"
+                    placeholder=""
+                    required
+                  ></textarea>
+                  <span class="form__control__placeholder textarea__placeholder">
+                    Your message <span class="symbol--required">*</span>
+                  </span>
+                </div>
+                
+  
+                <div class="contact-us__sent">
+                  <div class="contact-us__policy">
+                    <div class="contact-us__checkbox">
+                      <label>
+                        <input class="check-box" type="checkbox" required id="checkbox">
+                        <span class="checkbox-style"></span>
+                      </label>
+                    </div>
+                    
+  
+                    <div class="contact-us__policy--text">
+                      I agree with privacy policy *
+                    </div>
                   </div>
-
-                  <div class="contact-us__policy--text">
-                    I agree with privacy policy *
+  
+                  <div class="contact-us__button">
+                    <button class="contact-us__text" type="submit">
+                      Send message
+                    </button>
                   </div>
                 </div>
-
-                <div class="contact-us__button">
-                  <button class="contact-us__text" type="submit">
-                    Send message
-                  </button>
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </section>
 
-        <section class="get-started">
-          <h2 class="get-started__title">Get started with Publuu</h2>
-
-          <div class="get-started__button">
-            <a href="#Registration" class="get-started__text">Register now</a>
-          </div>
-        </section>
       </main>
-
+      
       <footer class="footer">
         <div class="footer-wrapper">
           <div class="footer-container">
@@ -735,7 +1101,7 @@
                 <li><a class="footer-column__item" href="#">Contact</a></li>
               </ul>
             </div>
-            <div class="footer-column">
+            <div class="footer-column footer-column-hidden">
               <h3 class="footer-column__title">SOLUTIONS</h3>
               <ul class="footer-column__items">
                 <li>
@@ -757,7 +1123,8 @@
                 </li>
               </ul>
             </div>
-            <div class="footer-column">
+            
+            <div class="footer-column footer-column-hidden">
               <h3 class="footer-column__title footer-column__title--hidden">
                 X
               </h3>
@@ -854,7 +1221,8 @@
           </div>
         </div>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="main.js"></script>
     </div>
-    <script src="main.js"></script>
   </body>
 </html>

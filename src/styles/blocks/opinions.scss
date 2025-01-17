@@ -1,4 +1,5 @@
 @import "../utils/variables.scss";
+@import "../utils/mixin.scss";
 
 .person-card {
   display: flex;
@@ -12,6 +13,15 @@
   align-items: center;
   position: relative;
   transition: background-color 0.3s ease;
+
+  @media (max-width: #{$desktop-min-width - 1px}) {
+  }
+
+  @media (max-width: #{$tablet-min-width - 1px}) {
+    padding: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
 
   &:hover {
     background-color: $fourth-text-color;
@@ -48,17 +58,39 @@
   width: 100%;
   align-items: center;
 
+  @media (max-width: #{$desktop-min-width - 1px}) {
+  }
+
+  @media (max-width: #{$tablet-min-width - 1px}) {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
   &--info {
     margin: 120px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      margin: 20px 0;
+    }
   }
 
   &__content {
     display: flex;
     max-width: 630px;
     flex-direction: column;
+
+    @media (max-width: #{$desktop-min-width - 1px}) {
+    }
+
+    @media (max-width: #{$tablet-min-width - 1px}) {
+      padding-top: 40px;
+    }
   }
 
   &__info {
@@ -80,6 +112,14 @@
     font-size: 50px;
     line-height: 70px;
     margin-top: 40px;
+
+    @media (max-width: ($desktop-min-width - 1)) {
+    }
+
+    @media (max-width: ($tablet-min-width - 1)) {
+      font-size: 42px;
+      line-height: 55px;
+    }
   }
 
   &__discription {
@@ -103,4 +143,9 @@
 
 .opinions {
   background-color: #f2f2f2;
+  padding: 0 15px;
+}
+
+.person-card.active-card {
+  background-color: #ffffff;
 }

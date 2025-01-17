@@ -11,10 +11,14 @@ h3 {
   padding: 0;
 }
 
-.year-highlight {
-  font-weight: bold;
+.wrapper {
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100%; 
+  padding: 0 15px;
 }
 
-html {
-  scroll-behavior: smooth;
+.body {
+  font-family: $main-font;
 }
